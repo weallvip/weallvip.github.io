@@ -1,139 +1,185 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1,minimum-scale,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="robots" content="all" />
-  <meta name="robots" content="index,follow" />
-	
- <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-  <title>会员视频观影</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>weallvip(我们都是VIP)2.0版本</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<style type="text/css">
+		.login-page {
+		  width: 360px;
+		  padding: 8% 0 0;
+		  margin: auto;
+		}
+		.form {
+		  position: relative;
+		  z-index: 1;
+		  background: #FFFFFF;
+		  max-width: 360px;
+		  margin: 0 auto 100px;
+		  padding: 45px;
+		  text-align: center;
+		  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		}
+		.form input {
+		  font-family: "Roboto", sans-serif;
+		  outline: 0;
+		  background: #f2f2f2;
+		  width: 100%;
+		  border: 0;
+		  margin: 0 0 15px;
+		  padding: 15px;
+		  box-sizing: border-box;
+		  font-size: 14px;
+		}
+		.form button {
+		  font-family: "Microsoft YaHei","Roboto", sans-serif;
+		  text-transform: uppercase;
+		  outline: 0;
+		  background: #4CAF50;
+		  width: 100%;
+		  border: 0;
+		  padding: 15px;
+		  color: #FFFFFF;
+		  font-size: 14px;
+		  -webkit-transition: all 0.3 ease;
+		  transition: all 0.3 ease;
+		  cursor: pointer;
+		}
+		.form button:hover,.form button:active,.form button:focus {
+		  background: #43A047;
+		}
+		.form .message {
+		  margin: 15px 0 0;
+		  color: #b3b3b3;
+		  font-size: 12px;
+		}
+		.form .message a {
+		  color: #4CAF50;
+		  text-decoration: none;
+		}
+		.form .register-form {
+		  display: none;
+		}
+		.container {
+		  position: relative;
+		  z-index: 1;
+		  max-width: 300px;
+		  margin: 0 auto;
+		}
+		.container:before, .container:after {
+		  content: "";
+		  display: block;
+		  clear: both;
+		}
+		.container .info {
+		  margin: 50px auto;
+		  text-align: center;
+		}
+		.container .info h1 {
+		  margin: 0 0 15px;
+		  padding: 0;
+		  font-size: 36px;
+		  font-weight: 300;
+		  color: #1a1a1a;
+		}
+		.container .info span {
+		  color: #4d4d4d;
+		  font-size: 12px;
+		}
+		.container .info span a {
+		  color: #000000;
+		  text-decoration: none;
+		}
+		.container .info span .fa {
+		  color: #EF3B3A;
+		}
+		body {
+		  background: #76b852; /* fallback for old browsers */
+		  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+		  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+		  background: -o-linear-gradient(right, #76b852, #8DC26F);
+		  background: linear-gradient(to left, #76b852, #8DC26F);
+		  font-family: "Roboto", sans-serif;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;      
+		}
+		.shake_effect{
+		 	-webkit-animation-name: shake;
+  			animation-name: shake;
+  			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+		}
+		@-webkit-keyframes shake {
+		  from, to {
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transform: translate3d(0, 0, 0);
+		  }
 
+		  10%, 30%, 50%, 70%, 90% {
+		    -webkit-transform: translate3d(-10px, 0, 0);
+		    transform: translate3d(-10px, 0, 0);
+		  }
 
- <!--weallvip.top-->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?9b07f09720f3cf9828d2259945e15349";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+		  20%, 40%, 60%, 80% {
+		    -webkit-transform: translate3d(10px, 0, 0);
+		    transform: translate3d(10px, 0, 0);
+		  }
+		}
 
-<!--weallvip.xyz-->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?93fd14ef219aea038d0cdd763649272d";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+		@keyframes shake {
+		  from, to {
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transform: translate3d(0, 0, 0);
+		  }
 
-  <style>
-    body{
-        background-color: #2F4F4F;   方式一设置
-    }
-  </style>
-  
+		  10%, 30%, 50%, 70%, 90% {
+		    -webkit-transform: translate3d(-10px, 0, 0);
+		    transform: translate3d(-10px, 0, 0);
+		  }
+
+		  20%, 40%, 60%, 80% {
+		    -webkit-transform: translate3d(10px, 0, 0);
+		    transform: translate3d(10px, 0, 0);
+		  }
+		}
+		p.center{
+			color: #fff;font-family: "Microsoft YaHei";
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
 </head>
-
 <body>
-  <div class="container">
-    <a>联系作者 QQ: 3433566355 </a>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="form-group">
-          <div class="input-group">
-            <span class="input-group-addon">接口</span>
-            <select id="selectId" class="form-control">
-              <option value="http://api.baiyug.cn/vip/index.php?url=" selected>超清</option>
-              <option value="http://jiexi.92fz.cn/player/vip.php?url=">接口1</option>
-              <option value="http://api.1008net.com/v.php?url=">接口2</option>			  
-              <option value="http://api.nepian.com/ckparse/?url=">接口3</option>
-              <option value="http://player.jidiaose.com/supapi/iframe.php?v=">接口4</option>
-	          <option value="http://www.0335haibo.com/yun.php?url=">接口5</option>		  
-              <option value="http://yun.mt2t.com/yun?url=">接口8</option>
-              <option value="http://y.mt2t.com/lines?url=">接口9</option>
-              <option value="http://www.0335haibo.com/yun.php?url=">接口10</option>
-              <option value="http://www.sfsft.com/video.php?url=">接口11</option>
-              <option value="http://www.82190555.com/video.php?url=">接口12</option>
-              <option value="http://2.jx.72du.com/video.php?url=">接口13</option>
-              <option value="http://www.97panda.com/kkflv/index.php?url=">接口14</option>
-              <option value="http://jx.vgoodapi.com/jx.php?url=">接口15</option>
-              <option value="http://www.dgua.xyz/webcloud/?url=">接口16</option>
-              <option value="http://api.91exp.com/svip/?url=">接口17</option>
-              <option value="http://vip.jlsprh.com/index.php?url=">接口18</option>
-              <option value="http://api.xfsub.com/index.php?url=">接口19</option>
-              <option value="http://jiexi.071811.cc/jx.php?url=">接口20</option>
-              <option value="http://jiexi.92fz.cn/player/vip.php?url=">接口21</option>
-              <option value="http://api.baiyug.cn/vip/index.php?url=">接口22</option>
-              <option value="http://api.662820.com/xnflv/index.php?url=">接口23</option>
-              <option value="http://www.82190555.com/index/qqvod.php?url=">接口24</option>
-              <option value="http://yyygwz.com/index.php?url=">接口25</option>
-              <option value="http://www.97panda.com/kkflv/index.php?url=">接口26</option>
-              <option value="http://jx.api.163ren.com/vod.php?url=">接口27</option>
-              <option value="http://lookxw.com/yingzi/?url=">接口28</option>
-              <option value="http://www.0335haibo.com/tong.php?url=">接口29</option>
-              <option value="http://www.wmxz.wang/video.php?url=">接口30</option>
-              <option value="http://api.97kn.com/?url=">接口31</option>
-              <option value="https://aikanapi.duapp.com/odflv105/index.php?url=">接口32</option>
-              <option value="http://v.buy360.vip/wwcx/index.php?url=">接口33</option>
-              <option value="http://api.lequgirl.com/?url">接口34</option>
-              <option value="https://jxapi.nepian.com/ckparse/?url=">接口35</option>
-              <option value="http://91k.co/play.php?url=">接口36</option>
-              <option value="http://www.52jiexi.com/yun.php?url=">接口37</option>
-              <option value="http://mt2t.com/yun?url=">接口38</option>
-              <option value="http://000o.cc/jx/ty.php?url=">接口39</option>
-              <option value="http://yyygwz.com/index.php?url=">接口40</option>
-              <option value="http://vipjiexi.com/vip.php?url=">接口41</option>
-              <option value="http://www.wmxz.wang/video.php?url=">接口42</option>
-              <option value="http://jx.ck921.com/?url=">接口43</option>
-              <option value="http://s1y2.com/?url=">接口44</option>
-              <option value="http://www.ou522.cn/t2/1.php?url=">接口45</option>
-              <option value="http://jx.xuanpianwang.com/parse?url=">接口46</option>
-              <option value="https://apiv.ga/magnet/">接口47</option>
-		      <option value="http://api.pucms.com/index.php?url=">接口5</option>
-			  <option value="http://api.wlzhan.com/sudu/?url=">接口6</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <input type="text" style='position:relative;' class="form-control" id="addressUrl" placeholder="请输入播放地址">
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="form-group">
-          <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-success" id="played">播放</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="border:1px solid #eee;border-radius:5px;background-color:#eee">
-      <div class="col-md-12">
-        <iframe width="100%" height="540px" scrolling=no id="player" frameborder="0" allowtransparency="true" allowFullScreen="true">
-        </iframe>
-      </div>
-    </div>
-  </div>
-  
-      <div class="container" style="text-align:right;margin-top:25px;">    
-  
-      <a href="./share" title="首页" target="_blank">more更多</a>
 
-  </div>
-  <div class="container" style="text-align:center;margin-top:25px;">
-    <span class="copyright">Copyright © 2017 weallvip powered
-      <a href="http://weallvip.top" title="首页" target="_blank">weallvip!</a>
-    </span>
-  </div>
-  <script type="text/javascript" src="js/bofang.js"></script>
+
+	<p class="center" style="display:block;text-align:center;"> WE ALL VIP 欢迎你的使用!--一个可以免费看各大视频客户端会员视频的网站 </p>
+		<p class="center" style="display:block;text-align:center;"> 你一定也是一个乐于分享的朋友! </p>
+		<p class="center" style="display:block;text-align:center;"> 你一定也认同我们分享使人快乐的价值观! </p>
+<p class="center" style="display:block;text-align:center;"> 此版本为weallvip的2.0版本!,想提前体验的朋友请联系作者获取账号QQ3433566355 </p>
+
+		<div id="wrapper" class="login-page">
+		  <div id="login_form" class="form">
+		    <form class="register-form">
+		      <input type="text" placeholder="用户名" id="r_user_name"/>
+		      <input type="password" placeholder="密码" id="r_password" />
+		      <input type="text" placeholder="电子邮件" id="r_emial"/>
+		      <button id="create">创建账户</button>
+		      <p class="message">已经有了一个账户? <a href="#">立刻登录</a></p>
+		    </form>
+		    <form class="login-form">
+		      <input type="text" placeholder="用户名" id="user_name"/>
+		      <input type="password" placeholder="密码" id="password"/>
+		      <button id="login">登　录</button>
+		      <!--p class="message">还没有账户? <a href="#">立刻创建</a></p-->
+		    </form>
+		  </div>
+		</div>
+	
+	<!--script src="http://www.jqhtml.com/jquery/jquery-1.10.2.js"></script-->
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jq.js"></script>
 </body>
-
 </html>
