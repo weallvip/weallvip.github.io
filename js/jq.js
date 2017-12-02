@@ -4,7 +4,7 @@ function check_login()
 	 var name=$("#user_name").val();
 	 var pass=$("#password").val();
 	 if(name.length >= 6 && pass.length >= 6
-	  && pass == MD5(name).substr(0, name.length))
+	  && pass == MD5(name).substr(0, 6))
 	 {
 	  var passtwo = MD5(name);
 	 // if(password === passtwo)
