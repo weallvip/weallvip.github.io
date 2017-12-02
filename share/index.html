@@ -1,41 +1,236 @@
+<!doctype html>
+
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1,minimum-scale,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="robots" content="all" />
-  <meta name="robots" content="index,follow" />
-	
- <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-  <title>我们都是VIP</title>
- <!--jmshc.gihub.io-->
-  <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?88bf1565310f328036c3c935fc326970";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+
+<meta charset="utf-8"> 
+
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=(device-dpi)/2" />
+
+
+
+<title>weallvip能量值查询</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css">
+
+<script src="http://www.jqhtml.com/jquery/jquery-1.10.2.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- -------------摇奖排行榜---------------  -->
+
+<div class="Top_Record">
+
+	<div class="record_Top"><p>能量排行榜</p></div>
+
+    <div class="topRec_List">
+
+  		<dl>
+
+        	<dd>排名</dd>
+
+        	<dd>昵称</dd>
+
+        	<dd>能量值</dd>
+
+        	<dd>等级</dd>
+
+        </dl>
+
+        <div class="maquee">
+
+            <ul>
+
+                <li>
+
+                    <div>1</div>
+
+                    <div>金坷垃</div>
+
+                    <div>M1080</div>
+
+                    <div>L5 </div>
+
+                </li> 
+
+                <li>
+
+                    <div>2</div>
+
+                    <div>快来接我</div>
+
+                    <div>M880</div>
+
+                    <div>L10 </div>
+
+                </li> 
+
+                <li>
+
+                    <div>3</div>
+
+                    <div>罗娜其</div>
+
+                    <div>M760</div>
+
+                    <div>L4</div>
+
+                </li> 
+
+                <li>
+
+                    <div>4</div>
+
+                    <div>niccol</div>
+
+                    <div>M450</div>
+
+                    <div>L9</div>
+
+                </li> 
+
+                <li>
+
+                    <div>5</div>
+
+                    <div>哈萨克斯坦</div>
+
+                    <div>M320</div>
+
+                    <div>L11 </div>
+
+                </li> 
+
+                <li>
+
+                    <div>6</div>
+
+                    <div>快可立</div>
+
+                    <div>M220</div>
+
+                    <div>L10 </div>
+
+                </li> 
+
+                <li>
+
+                    <div>7</div>
+
+                    <div>金瓯无缺</div>
+
+                    <div>M50</div>
+
+                    <div>L2 </div>
+
+                </li> 
+
+                <li>
+
+                    <div>8</div>
+
+                    <div>lkkdd</div>
+
+                    <div>M20</div>
+
+                    <div>L5 </div>
+
+                </li> 
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div> 
+
+
+
+
+
+<!--div class="apple">
+
+	<ul>
+
+		<li><a href="#" target="_blank">你是我的小丫小苹果 </a></li>  
+
+        <li><a href="#" target="_blank">怎么爱你都不嫌多</a></li> 
+
+        <li><a href="#" target="_blank">红红的小脸儿温暖我的心窝 </a></li>  
+
+        <li><a href="#" target="_blank">点亮我生命的火 火火火火</a></li> 
+
+        <li><a href="#" target="_blank">你是我的小丫小苹果 </a></li>  
+
+        <li><a href="#" target="_blank">就像天边最美的云朵</a></li>  
+
+        <li><a href="#" target="_blank">春天又来到了花开满山坡 </a></li>  
+
+        <li><a href="#" target="_blank">种下希望就会收获</a></li> 
+
+    </ul> 
+
+</div-->
+
+
+
+
+
+<div class="aa">
+
+	<marquee direction="left">
+
+我们的宗旨 : 不让乐于分享的朋友白白付出!不让懒于分享的观众坐享其成!   免费注册,分享给好友注册*10能量值,10能量值兑换1.0元红包!再次多谢好心赞助我们的朋友!还有多谢乐于分享的你们!让我们在分享中体现价值,在观影中收获快乐!
+
+</marquee>
+
+</div>
 
   <style>
     body{
         background-color: #2F4F4F;   方式一设置
     }
   </style>
-  
-</head>
 
-<body>
+<script type="text/javascript"> 
 
-  <div class="container" style="text-align:center;margin-top:25px;">    
-    <a>联系作者QQ: 3433566355 </a>  
-  </div>
-    <div class="container" style="text-align:center;margin-top:25px;">    
-    <a>页面正在开发中 ING... ~_~</a>  
-  </div>
+	  function autoScroll(obj){  
+
+			$(obj).find("ul").animate({  
+
+				marginTop : "-39px"  
+
+			},500,function(){  
+
+				$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+
+			})  
+
+		}  
+
+		$(function(){  
+
+			setInterval('autoScroll(".maquee")',3000);
+
+			setInterval('autoScroll(".apple")',2000);
+
+			  
+
+		}) 
+
+		
+
+</script> 
+
   <div class="container" style="text-align:center;margin-top:25px;">
     <span class="copyright">Copyright © 2017 weallvip powered
       <a href="http://weallvip.top" title="首页" target="_blank">weallvip!</a>
@@ -44,3 +239,4 @@ var _hmt = _hmt || [];
 </body>
 
 </html>
+
